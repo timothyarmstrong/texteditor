@@ -4,9 +4,15 @@
     <title>Edit Text</title>
     <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    
+    <link rel="stylesheet" type="text/css" href="css/font/latin-modern-mono/stylesheet.css" />
+    
     <style>
       html, body {
         height:100%;
+        margin:0;
       }
       
       textarea {
@@ -27,10 +33,21 @@
         right:inherit;  
       }
       
+      #text {
+        font: 25px/35px 'LatinModernMono10Regular', monospace;
+        letter-spacing:2px;
+        padding:30px 100px;
+      }
+      
+      #text p {
+        -webkit-margin-before:0;
+        -webkit-margin-after:0;
+      }
+      
       #extrakeys {
-        position:absolute;
+        position:fixed;
         background:gray;
-        height: 100px;
+        height: 92px;
         width:100%;
         bottom:0;
         left:0;
@@ -38,15 +55,57 @@
       
       #extrakeys .button {
         float:left;
-        height:90px;
+        height:60px;
         width:90px;
         border:1px solid black;
         background:#ccc;
         border-radius:5px;
-        line-height:90px;
+        line-height:60px;
         text-align:center;
         font-family:arial;
+        margin:3px;
       }
+      
+      #extrakeys .actions {
+        float:left;
+        padding-top:13px;
+        padding-left:5px;
+      }
+      
+      #extrakeys .button.key {
+        height:35px;
+        width:35px;
+        margin:3px;
+        line-height:35px;
+      }
+      
+      #extrakeys .keys {
+        padding-top:3px;
+        padding-left:3px;
+        float:left;
+      }
+      
+      #extrakeys .row {
+        clear:left;
+      }
+      
+      /* COLORS */
+      
+      /* light */
+      
+      #text {
+        color:black;
+        background:#eee;
+      }
+      
+      /* dark */
+      
+      body.dark #text {
+        color:#ddd;
+        background:#333;
+      }
+      
+      
     </style>
     <script>
       $(function() {
@@ -70,21 +129,94 @@
     </div>
     
     <div id="extrakeys">
-      <div class="button">
-        |word
+      <div class="actions">
+        <div class="button">
+          |word
+        </div>
+        <div class="button">
+          word|
+        </div>
+        <div class="button">
+          &lt;-
+        </div>
+        <div class="button">
+          -&gt;
+        </div>
       </div>
-      <div class="button">
-        word|
-      </div>
-      <div class="button">
-        &lt;-
-      </div>
-      <div class="button">
-        -&gt;
+      
+      <div class="keys">
+        <div class="row">
+          <div class="button key" data-value="#">
+            #
+          </div>
+          <div class="button key" data-value="!">
+            !
+          </div>
+          <div class="button key" data-value="-">
+            -
+          </div>
+          <div class="button key" data-value="=">
+            =
+          </div>
+          <div class="button key" data-value="&lt;">
+            &lt;
+          </div>
+          <div class="button key" data-value="&gt;">
+            &gt;
+          </div>
+          <div class="button key" data-value="+">
+            +
+          </div>
+          <div class="button key" data-value="*">
+            *
+          </div>
+          <div class="button key" data-value="\">
+            \
+          </div>
+          <div class="button key" data-value="\"">
+            "
+          </div>
+          <div class="button key" data-value="'">
+            '
+          </div>
+        </div>
+        <div class="row">
+          <div class="button key" data-value="[">
+            [
+          </div>
+          <div class="button key" data-value="]">
+            ]
+          </div>
+          <div class="button key" data-value="(">
+            (
+          </div>
+          <div class="button key" data-value=")">
+            )
+          </div>
+          <div class="button key" data-value=":">
+            :
+          </div>
+          <div class="button key" data-value=":">
+            ;
+          </div>
+          <div class="button key" data-value="_">
+            _
+          </div>
+          <div class="button key" data-value="`">
+            `
+          </div>
+          <div class="button key" data-value="&amp;">
+            &amp;
+          </div>
+          <div class="button key" data-value="{">
+            {
+          </div>
+          <div class="button key" data-value="}">
+            }
+          </div>
+        </div>
       </div>
     </div>
-    
-    
     
   </body>
 </html>
