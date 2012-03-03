@@ -10,7 +10,7 @@
       }
       
       textarea {
-        opacity:1;
+        opacity:0;
         position:absolute;
         display:block;
         top:0;
@@ -26,6 +26,27 @@
         bottom:inherit;
         right:inherit;  
       }
+      
+      #extrakeys {
+        position:absolute;
+        background:gray;
+        height: 100px;
+        width:100%;
+        bottom:0;
+        left:0;
+      }
+      
+      #extrakeys .button {
+        float:left;
+        height:90px;
+        width:90px;
+        border:1px solid black;
+        background:#ccc;
+        border-radius:5px;
+        line-height:90px;
+        text-align:center;
+        font-family:arial;
+      }
     </style>
     <script>
       $(function() {
@@ -35,5 +56,35 @@
   </head>
   <body>
     <textarea id="textarea"></textarea>
+    
+    <div id="text">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a elit tempor turpis tristique dictum. Suspendisse at tempor orci. In scelerisque bibendum massa, vel gravida quam vulputate eget. Suspendisse potenti. Nulla odio quam, consectetur at euismod nec, mattis non turpis. Aenean ligula ligula, congue sed laoreet at, cursus at velit. Quisque laoreet, velit sed consectetur scelerisque, sapien nisi adipiscing odio, non dictum neque libero ut dolor. Curabitur cursus neque eget eros consequat sed sodales dolor tempor. Morbi a lacus id purus eleifend pharetra. Donec in nulla eu metus tristique varius eget a neque. Etiam nulla velit, suscipit a sollicitudin eu, feugiat a dolor. Donec magna diam, sollicitudin in tincidunt quis, interdum a justo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Etiam porttitor, orci sed mattis sagittis, nulla erat pretium arcu, eget dignissim magna mi non lacus. Praesent sed nisi risus. Morbi in odio libero, a iaculis lectus.</p>
+      
+      <p>Morbi sed enim nisl. Proin tempor dolor id quam malesuada eu egestas velit consequat. Vivamus est metus, posuere at consectetur at, imperdiet sit amet dolor. Donec ante lorem, congue et suscipit sed, commodo in ante. Vivamus et eros eu lacus tristique elementum. Duis lacus enim, varius ac semper a, gravida sed tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+      
+      <p>Nunc eu ligula nulla, vel bibendum arcu. Cras sed massa quis elit lacinia eleifend ut vel dolor. Nam in odio elit. Phasellus egestas orci lorem, id hendrerit ipsum. Donec sed ante orci, at sodales nibh. Nunc ultricies ipsum et felis semper non gravida arcu elementum. Suspendisse libero ante, consectetur nec varius eu, aliquet venenatis mi. Mauris vel elit sem, ut lobortis dolor.</p>
+      
+      <p>Nulla facilisi. Morbi consequat lacus vel turpis porta condimentum. Aenean viverra tortor eu leo aliquet eget vulputate lorem facilisis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent pharetra nulla interdum lacus malesuada bibendum. Praesent mattis, erat id pharetra dignissim, magna turpis tempus tortor, laoreet semper odio ante eu nulla. Nulla odio enim, convallis ac mollis vel, dignissim ac enim. Phasellus elementum feugiat nulla.</p>
+      
+      <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer tempor commodo ligula, vel posuere purus imperdiet id. Phasellus in purus id tellus dapibus fringilla. Cras eleifend dictum est, vitae tempor augue hendrerit sit amet. Mauris tempus leo eget lacus tincidunt nec scelerisque risus dignissim. Pellentesque pharetra malesuada risus id hendrerit. Suspendisse id diam quis ipsum auctor aliquam quis nec risus. Nam lorem dui, luctus quis consequat vitae, tempor id quam. Morbi eleifend, sem id molestie congue, dui urna eleifend eros, nec placerat sem justo sit amet quam. Proin in tempus sapien. Fusce vestibulum ante a eros semper sit amet ultrices libero interdum. Nam quis lacus quam, in lacinia metus. Praesent in diam nisl. Duis ut risus lectus, in auctor est.</p>
+    </div>
+    
+    <div id="extrakeys">
+      <div class="button">
+        |word
+      </div>
+      <div class="button">
+        word|
+      </div>
+      <div class="button">
+        &lt;-
+      </div>
+      <div class="button">
+        -&gt;
+      </div>
+    </div>
+    
+    
+    
   </body>
 </html>
