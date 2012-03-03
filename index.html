@@ -5,13 +5,35 @@
     <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     
     <style>
+      html, body {
+        height:100%;
+      }
       
+      textarea {
+        opacity:1;
+        position:absolute;
+        display:block;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        
+      }
+      
+      textarea:focus {
+        top:-10000px;
+        left:-10000px;
+        bottom:inherit;
+        right:inherit;  
+      }
     </style>
     <script>
-      
+      $(function() {
+        var $textarea = $('#textarea');
+      });
     </script>
   </head>
   <body>
-    
+    <textarea id="textarea"></textarea>
   </body>
 </html>
